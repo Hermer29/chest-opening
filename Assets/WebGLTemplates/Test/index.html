@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Chest</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <link rel="stylesheet" href="TemplateData/sharing.css">
+  <script async src="web3/ton.js"></script>
+</head>
+<script src ="TemplateData/sharing.js"></script>
+<body>
+<!--Sharing-->
+<div id="sharing-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="sharing">
+      <script src="https://yastatic.net/share2/share.js"></script>
+      <div id="ya-share2" data-curtain data-lang="en" data-services="telegram,twitter,viber,whatsapp,skype,reddit"></div>
+    </div>
+  </div>
+</div>
+<!---->
+  <div id="unity-container" class="unity-desktop">
+    <button id="play-button"></button>
+    <video src="StreamingAssets/intro.mp4" type="video/mp4" style="width: 960px;
+    height: 600px;
+    position: absolute;" id="video">
+    </video>
+    <canvas id="unity-canvas" width=960 height=600>
+    </canvas>
+    <div id="unity-custom-loading-screen">
+      <div id="custom-loader">
+        <div class="fill"></div>
+        <div class="label"></div>
+      </div>
+    </div>
+    <div id="unity-footer">
+      <div id="unity-fullscreen-button"></div>
+      <div id="unity-build-title">ChestGameTest</div>
+    </div>
+  </div>
+  <script>//UnityFunctions
+    let container = document.querySelector("#unity-container");
+    let canvas = document.querySelector("#unity-canvas");
+    let loadingScreen = document.querySelector("#unity-custom-loading-screen");
+    let customLoadingBar = document.querySelector("#custom-loader");
+    let fullscreenButton = document.querySelector("#unity-fullscreen-button");
+    let playButton = document.getElementById('play-button');
+
+    playButton.hidden = true;
+
+    let buildUrl = "Build/";
+    let loaderUrl = buildUrl + "{{{ LOADER_FILENAME }}}";
+    let config = {
+      dataUrl: buildUrl + "{{{ DATA_FILENAME }}}",
+      frameworkUrl: buildUrl + "{{{ FRAMEWORK_FILENAME }}}",
+      codeUrl: buildUrl + "{{{ CODE_FILENAME }}}",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "ChestGameTest",
+    };
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      container.className = "unity-mobile";
+      // Avoid draining fillrate performance on mobile devices,
+      // and default/override low DPI mode on mobile browsers.
+      config.devicePixelRatio = 1;
+    } else {
+      canvas.style.width = "960px";
+      canvas.style.height = "600px";
+    }
+    loadingScreen.style.display = "block";
+
+    let script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        unitySetLoaderProgressTo(progress);
+      }).then((unityInstance) => {
+        playButton.hidden = false;
+        loadingScreen.style.display = "none";
+        fullscreenButton.onclick = () => {
+          unityInstance.SetFullscreen(1);
+        };
+        playButton.onclick = (event) => {
+        event.target.parentNode.removeChild(event.target);
+        let video = document.getElementById('video');
+        video.play();
+        video.addEventListener('ended', () => {
+        video.parentNode.removeChild(video);
+        return false;
+      });
+    }
+      }).catch((message) => {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+
+    // value - 0 to 1
+    function unitySetLoaderProgressTo(value) {
+      const fill = customLoadingBar.getElementsByClassName("fill")[0];
+      const fillText = customLoadingBar.getElementsByClassName("label")[0];
+
+      fill.animate(
+              [
+                {width: (value * 100) + "%"}
+              ],
+              {
+                duration: 300,
+                fill: "forwards"
+              }
+      );
+
+      fillText.textContent = (value * 100).toFixed() + "%";
+    }
+  </script>
+</body>
+
+</html>

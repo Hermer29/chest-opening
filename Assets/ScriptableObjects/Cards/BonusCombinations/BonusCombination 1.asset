@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77de4b51f54483f4595f1113fe7300af, type: 3}
+  m_Name: BonusCombination 1
+  m_EditorClassIdentifier: 
+  DaysToHolder: 0
+  HourseToHolder: 10
+  MinuteToHolder: 0
+  SecondToHolder: 0
+  Combination:
+    _firstCard: {fileID: 11400000, guid: cd14356ea0efe2348acba8ddaadcf65d, type: 2}
+    _secondCard: {fileID: 11400000, guid: d8b9d5b5b65cc6440a98e43cd1140ad2, type: 2}
+    _thirdCard: {fileID: 11400000, guid: 0346decb75a2a9a4289836caa1a9d38b, type: 2}

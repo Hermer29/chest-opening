@@ -1,0 +1,85 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #231f20;
+}
+
+#unity-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#unity-canvas {
+    background: #231F20
+}
+
+#unity-footer {
+    position: relative
+}
+
+#unity-build-title {
+    float: right;
+    margin-right: 10px;
+    line-height: 38px;
+    font-family: arial;
+    font-size: 18px;
+    color: aquamarine;
+}
+
+#unity-fullscreen-button {
+    float: right;
+    width: 38px;
+    height: 38px;
+    background: url('fullscreen-button.png') no-repeat center
+}
+
+
+#custom-loader {
+    margin-top: 20px;
+    width: 40%;
+    height: 30px;
+    background: #2c2a2a;
+    box-shadow: 0px 0px 15px 5px #c7c7c7;
+    margin-left: 30%;
+}
+
+#custom-loader .fill {
+    width: 0%;
+    height: 100%;
+    background: #6f8f67;
+}
+
+#custom-loader .label {
+    bottom: 100%;
+    font-size: 25px;
+    text-align: center;
+    font-family: sans-serif, calibri;
+    position: relative;
+    color: coral;
+}
+
+#play-button {
+    position: absolute;
+    z-index: 10;
+    bottom: 50%;
+    background: url(play-button.png) no-repeat center;
+    height: 200px;
+    background-color: beige;
+    background-size: 150px;
+    width: 200px;
+    left: 40%;
+    border-radius: 50px;
+}
+
+#play-button:focus {
+    background-color: rgba(245, 245, 220, 0.774);
+    height: 190px;
+    width: 190px;
+}
+
+
+
+
+

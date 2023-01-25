@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e950d16f241f0e418111ad2f1535c20, type: 3}
+  m_Name: CardsDataBase
+  m_EditorClassIdentifier: 
+  CardPref: {fileID: 2332765390023495516, guid: c10c97ce0321218458b2369bebee61db, type: 3}
+  AllCards:
+  - {fileID: 11400000, guid: 95a4cf58f930e914d910edd3d99971f1, type: 2}
+  - {fileID: 11400000, guid: 5ce9079a22a3ea743b22627ab45d0e5b, type: 2}
+  - {fileID: 11400000, guid: 9f0f69a0b0807f84aa8d7428a361e0f3, type: 2}
+  - {fileID: 11400000, guid: cd14356ea0efe2348acba8ddaadcf65d, type: 2}
+  - {fileID: 11400000, guid: d8b9d5b5b65cc6440a98e43cd1140ad2, type: 2}
+  - {fileID: 11400000, guid: 0346decb75a2a9a4289836caa1a9d38b, type: 2}
+  - {fileID: 11400000, guid: bd055f73422aa464289ad6d2bad103dc, type: 2}
+  MisteryCards:
+  - {fileID: 11400000, guid: df01a91652f59ba4cbfa6505dce0cc72, type: 2}
+  - {fileID: 11400000, guid: 2ce5a16352578bf43b5ce9d574c5b20c, type: 2}
+  - {fileID: 11400000, guid: 727f564259b11cb4596240b5219b1f79, type: 2}
+  - {fileID: 11400000, guid: c086a74f82d01a64584db1321002681b, type: 2}
+  - {fileID: 11400000, guid: bee0cdd582cfeb4419a41a360b134feb, type: 2}
+  - {fileID: 11400000, guid: ac38dfa450e81f240aa1eef346e234a0, type: 2}
+  - {fileID: 11400000, guid: 496879109b7a53943b354080e477dce9, type: 2}
+  - {fileID: 11400000, guid: cf12317c4f254ac4e92318c87785a583, type: 2}
+  - {fileID: 11400000, guid: 332b9d35dddef7441b4a2be6b7e120c4, type: 2}
+  BonusCombinations:
+  - {fileID: 11400000, guid: bc5fcc6094d9d35489f047e85c787993, type: 2}
+  - {fileID: 11400000, guid: a4b1805e54a5c644e8f4a8c1c4b41e7b, type: 2}
+  WinCombinations:
+  - {fileID: 11400000, guid: 5635eb4cedffbdf4ba8b7afdeb7bbbee, type: 2}
+  - {fileID: 11400000, guid: fc284097e9064ef4693683aafa6d7e60, type: 2}
+  - {fileID: 11400000, guid: 54ed1c45709a57642a4784e43ab3f860, type: 2}
+  - {fileID: 11400000, guid: b6e8050dbca331f4b86741e2d2d20f04, type: 2}
+  - {fileID: 11400000, guid: 9270bec4668fa2a49b2f75c89a874afc, type: 2}
+  - {fileID: 11400000, guid: fbe2beed916bea647be77767666bd50b, type: 2}
+  - {fileID: 11400000, guid: dcaa0461ed13ecb40a6e03125509a802, type: 2}
+  - {fileID: 11400000, guid: 619dfb725d66c4142b73448131ce40a9, type: 2}
+  Chests:
+  - {fileID: 11400000, guid: 44c15c86829f0534ba568dbfd9dc8680, type: 2}
+  - {fileID: 11400000, guid: e46d2154d38cf524ea2917026dedd09f, type: 2}
